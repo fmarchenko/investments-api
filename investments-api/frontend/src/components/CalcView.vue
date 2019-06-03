@@ -14,7 +14,7 @@
                             <div class="col-auto">
                                 <label for="id_amount" class="sr-only">Investments amount in USD</label>
                                 <input type="number" class="form-control mb-2" id="id_amount"
-                                       placeholder="Investments amount" v-model="amount">
+                                       placeholder="Investments amount" v-model="amount" required>
                             </div>
                             <div class="col-auto">
                                 <button type="submit" class="btn btn-primary mb-2" id="id_send">Calculate</button>
