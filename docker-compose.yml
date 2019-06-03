@@ -1,12 +1,23 @@
 version: '3'
 
 services:
+  caddy:
+    image: abiosoft/caddy
+    restart: always
+    ports:
+      - 8080:2015
+    volumes:
+      - ./Caddyfile:/etc/Caddyfile
+      - ./investments-api/frontend/dist:/srv
+    env_file:
+      - .env
+    depends_on:
+      - api
+
   api:
     build: .
     restart: always
 #    command: "devserver"
-    ports:
-      - $API_PORT:$API_PORT
     env_file:
       - .env
     environment:
