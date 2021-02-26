@@ -1,4 +1,4 @@
-aiohttp==3.5.4
+aiohttp==3.7.4
 aiohttp-devtools==0.13
 aiohttp-session==2.7.0
 alembic==1.0.10
